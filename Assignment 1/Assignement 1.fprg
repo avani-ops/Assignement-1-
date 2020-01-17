@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Avani"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-16 10:30:33 PM"/>
+        <attribute name="created" value="QXZhbmk7REVTS1RPUC00QjVERUlUOzIwMjAtMDEtMTY7MTA6MDQ6MTAgUE07MjgwNQ=="/>
+        <attribute name="edited" value="QXZhbmk7REVTS1RPUC00QjVERUlUOzIwMjAtMDEtMTY7MTA6MzA6MzMgUE07NTsyOTIx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This flow chart describes the procedure of making Apple Sandwiches. "/>
+            <output expression="&quot;Enter the work place&quot;" newline="True"/>
+            <output expression="&quot;Take apple from fridge&quot;" newline="True"/>
+            <output expression="&quot;Take Mayo from fridge&quot;" newline="True"/>
+            <output expression="&quot;Take butter from fridge&quot;" newline="True"/>
+            <output expression="&quot;Take a clean Knife&quot;" newline="True"/>
+            <output expression="&quot;Take a chopping board&quot;" newline="True"/>
+            <output expression="&quot;Chopped Apples in small pieces on chopping board&quot;" newline="True"/>
+            <output expression="&quot;Take a clean spoon&quot;" newline="True"/>
+            <output expression="&quot;Take a medium size bowl&quot;" newline="True"/>
+            <output expression="&quot;Add chopped apple in bowl using spoon&quot;" newline="True"/>
+            <output expression="&quot;Add Mayo in chopped apple using spoon&quot;" newline="True"/>
+            <output expression="&quot;Reuse spoon to add butter in Chopped Apple Mixture&quot;" newline="True"/>
+            <output expression="&quot;Add black paper into chopped apple mixture&quot;" newline="True"/>
+            <output expression="&quot;Mix the apple with other ingrediants properly&quot;" newline="True"/>
+            <output expression="&quot;Take Bread packet out from fridge&quot;" newline="True"/>
+            <output expression="&quot;Take a clean knife&quot;" newline="True"/>
+            <output expression="&quot;Spread butter on one side of bread slice&quot;" newline="True"/>
+            <output expression="&quot;Take another slice of bread&quot;" newline="True"/>
+            <output expression="&quot;Use same knife to spread butter on another slice of bread&quot;" newline="True"/>
+            <output expression="&quot;Spread apple filling on bread using spoon&quot;" newline="True"/>
+            <output expression="&quot;Place another slide of bread on top of it&quot;" newline="True"/>
+            <output expression="&quot;Turn on the grill , keep it for 10 mins to warm&quot;" newline="True"/>
+            <output expression="&quot;Put sandwich in grill&quot;" newline="True"/>
+            <output expression="&quot;Wait for 2 mins&quot;" newline="True"/>
+            <output expression="&quot;Turn off the grill&quot;" newline="True"/>
+            <output expression="&quot;Take sandwich out from the grill using spetula&quot;" newline="True"/>
+            <output expression="&quot;Serve in plate&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
