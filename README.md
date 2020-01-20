@@ -6,3 +6,4 @@ Hello I am Avanikaben Jadav, but please call me Avani ...I have completed my Ass
 
 ## Assignment 2
 
+Integrated Development Environment provides different tools to make the program easy to write and run. It includes text editor,  compiler, output viewer, linker, loader. This week I have tried online IDE Repl.it which is free also. This IDE supports many languages including Python, Java, C#, Ruby, HTML, CSS and many more. In IDE we can see coding is different in each language just to print "Hello world" each language has a series of codes. I want to be a web developer in java in this IDE can help me to understand and write a small program in java.
