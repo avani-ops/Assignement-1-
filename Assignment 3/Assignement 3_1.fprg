@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Y203EU13"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-22 07:46:23 PM"/>
+        <attribute name="created" value="WTIwM0VVMTM7WTIwM0VXMTM7MjAyMC0wMS0yMjswNzozNjowMiBQTTsyMjU3"/>
+        <attribute name="edited" value="WTIwM0VVMTM7WTIwM0VXMTM7MjAyMC0wMS0yMjswNzo0NjoyMyBQTTs5OzIzNzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program will count the  Weekly , Monthly and Yearly(Gross Income) according to user input wage and hours"/>
+            <declare name="wage" type="Real" array="False" size=""/>
+            <declare name="hour" type="Real" array="False" size=""/>
+            <declare name="weekly" type="Real" array="False" size=""/>
+            <declare name="monthly" type="Real" array="False" size=""/>
+            <declare name="annualy" type="Real" array="False" size=""/>
+            <output expression="&quot;Please Enter Hourly Rate : &quot;" newline="True"/>
+            <input variable="wage"/>
+            <output expression="&quot;Please Enter Hours Work : &quot;" newline="True"/>
+            <input variable="hour"/>
+            <assign variable="weekly" expression="wage*hour"/>
+            <assign variable="annualy" expression="wage*hour*52"/>
+            <assign variable="monthly" expression="annualy/12"/>
+            <output expression="&quot;Your Weekly Income is : $&quot; &amp;weekly" newline="True"/>
+            <output expression="&quot;Your Monthly Income is : $&quot; &amp;monthly" newline="True"/>
+            <output expression="&quot;Your Annual Income is : $&quot; &amp;annualy" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

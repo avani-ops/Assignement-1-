@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Y203EU13"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-22 07:34:40 PM"/>
+        <attribute name="created" value="WTIwM0VVMTM7WTIwM0VXMTM7MjAyMC0wMS0yMjswNjo1Mzo0MiBQTTsyMjU5"/>
+        <attribute name="edited" value="WTIwM0VVMTM7WTIwM0VXMTM7MjAyMC0wMS0yMjswNzozNDo0MCBQTTs3OzIzNzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program will convert the Age into Months , Days , Hours, and Seconds"/>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <declare name="months" type="Integer" array="False" size=""/>
+            <declare name="days" type="Integer" array="False" size=""/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <declare name="seconds" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please Enter Your Age : &quot;" newline="True"/>
+            <input variable="age"/>
+            <assign variable="months" expression="age*12"/>
+            <assign variable="days" expression="age*365"/>
+            <assign variable="hours" expression="age*8760"/>
+            <assign variable="seconds" expression="age*31556952"/>
+            <output expression="&quot;Your Age in Months : &quot; &amp; months &amp; &quot; months&quot;" newline="True"/>
+            <output expression="&quot;Your Age in Days : &quot; &amp; days &amp; &quot; days&quot;" newline="True"/>
+            <output expression="&quot;Your Age in Hours : &quot; &amp; hours &amp; &quot; hours&quot;" newline="True"/>
+            <output expression="&quot;Your Age in Months : &quot; &amp; seconds &amp; &quot; seconds&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
