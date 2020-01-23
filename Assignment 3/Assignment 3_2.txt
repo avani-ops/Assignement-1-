@@ -1,0 +1,19 @@
+Function Main
+    ... This program will convert the Age into Months , Days , Hours, and Seconds
+    Declare Integer age
+    Declare Integer months
+    Declare Integer days
+    Declare Integer hours
+    Declare Integer seconds
+    
+    Output "Please Enter Your Age : "
+    Input age
+    Assign months = age*12
+    Assign days = age*365
+    Assign hours = age*8760
+    Assign seconds = age*31556952
+    Output "Your Age in Months : " & months & " months"
+    Output "Your Age in Days : " & days & " days"
+    Output "Your Age in Hours : " & hours & " hours"
+    Output "Your Age in Months : " & seconds & " seconds"
+End

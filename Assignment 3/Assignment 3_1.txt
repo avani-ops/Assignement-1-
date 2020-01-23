@@ -1,0 +1,19 @@
+Function Main
+    ... This program will count the  Weekly , Monthly and Yearly(Gross Income) according to user input wage and hours
+    Declare Real wage
+    Declare Real hour
+    Declare Real weekly
+    Declare Real monthly
+    Declare Real annualy
+    
+    Output "Please Enter Hourly Rate : "
+    Input wage
+    Output "Please Enter Hours Work : "
+    Input hour
+    Assign weekly = wage*hour
+    Assign annualy = wage*hour*52
+    Assign monthly = annualy/12
+    Output "Your Weekly Income is : $" &weekly
+    Output "Your Monthly Income is : $" &monthly
+    Output "Your Annual Income is : $" &annualy
+End
