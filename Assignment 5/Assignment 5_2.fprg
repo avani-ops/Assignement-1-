@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="y203eU10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-29 07:41:30 PM"/>
+        <attribute name="created" value="eTIwM2VVMTA7WTIwM0VXMTA7MjAyMC0wMS0yOTswNzozMDoyMyBQTTsyMzE5"/>
+        <attribute name="edited" value="eTIwM2VVMTA7WTIwM0VXMTA7MjAyMC0wMS0yOTswNzo0MTozMCBQTTsyOzI0Mjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+    <function name="displayDays" type="None" variable="">
+        <parameters>
+            <parameter name="Days" type="Real" array="False"/>
+        </parameters>
+        <body/>
+    </function>
+    <function name="displayHours" type="None" variable="">
+        <parameters>
+            <parameter name="houra" type="Real" array="False"/>
+        </parameters>
+        <body/>
+    </function>
+    <function name="displayMonths" type="None" variable="">
+        <parameters>
+            <parameter name="Months" type="Real" array="False"/>
+        </parameters>
+        <body/>
+    </function>
+    <function name="displaySeconds" type="None" variable="">
+        <parameters>
+            <parameter name="Seconds" type="Integer" array="False"/>
+        </parameters>
+        <body/>
+    </function>
+    <function name="getAge" type="Real" variable="Age">
+        <parameters/>
+        <body>
+            <declare name="Age" type="Real" array="False" size=""/>
+        </body>
+    </function>
+    <function name="getDays" type="Real" variable="Days">
+        <parameters>
+            <parameter name="Age" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Days" type="Real" array="False" size=""/>
+        </body>
+    </function>
+    <function name="getHours" type="Real" variable="Hours">
+        <parameters>
+            <parameter name="Age" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Hours" type="Real" array="False" size=""/>
+        </body>
+    </function>
+    <function name="getMonths" type="Real" variable="Months">
+        <parameters>
+            <parameter name="Age" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Month" type="Real" array="False" size=""/>
+        </body>
+    </function>
+    <function name="getSeconds" type="Real" variable="Seconds">
+        <parameters>
+            <parameter name="Age" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Seconds" type="Real" array="False" size=""/>
+        </body>
+    </function>
+</flowgorithm>
