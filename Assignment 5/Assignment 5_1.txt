@@ -1,0 +1,62 @@
+Function Main
+    ... This program will take wage and hour from user and count the weekly , monthly and annual income of the person
+    ... Calling Function to take input from the user
+    Declare Real Wage
+    Declare Real Hour
+    Declare Real Annualy
+    Declare Real Weekly
+    Declare Real Monthly
+    
+    Assign Wage = getWage()
+    Assign Hour = getHour()
+    Assign Weekly = getWeekly(Wage,Hour)
+    Assign Annualy = getAnnualy(Weekly)
+    Assign Monthly = getMonthly(Annualy)
+    Call DisplayWeekly(Weekly)
+    Call DisplayMonthly(Monthly)
+    Call DisplayAnnualy(Annualy)
+End
+
+Function DisplayAnnualy (Integer Annualy)
+    Output "Total Annualy Income : $ " & Annualy
+End
+
+Function DisplayMonthly (Real Monthly)
+    Output "Total Monthly Income : $ " & Monthly
+End
+
+Function DisplayWeekly (Real Weekly)
+    Output "Total Weekly Income : $ " & Weekly
+End
+
+Function GetAnnualy (Real Weekly)
+    Declare Real Annualy
+    
+    Assign Annualy = Weekly * 52
+Return Real Annualy
+
+Function GetHour
+    Declare Real Hour
+    
+    Output "Please Enter Working Hour of Week : "
+    Input Hour
+Return Real Hour
+
+Function GetMonthly (Real Annualy)
+    Declare Real Monthly
+    
+    Assign Monthly = Annualy / 12
+Return Real Monthly
+
+Function GetWage
+    Declare Real Wage
+    
+    Output "Please Enter Your Wage per Hour : "
+    Input Wage
+Return Real Wage
+
+Function GetWeekly (Real Wage, Real Hour)
+    Declare Real Weekly
+    
+    Assign Weekly = Wage * Hour
+Return Real Weekly

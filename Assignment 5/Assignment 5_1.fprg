@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="y203eU10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-29 07:27:40 PM"/>
+        <attribute name="created" value="eTIwM2VVMTA7WTIwM0VXMTA7MjAyMC0wMS0yOTswNjo0MToyNyBQTTsyMzI0"/>
+        <attribute name="edited" value="eTIwM2VVMTA7WTIwM0VXMTA7MjAyMC0wMS0yOTswNzoyNzo0MCBQTTsxOzI0MzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program will take wage and hour from user and count the weekly , monthly and annual income of the person"/>
+            <comment text="Calling Function to take input from the user"/>
+            <declare name="Wage" type="Real" array="False" size=""/>
+            <declare name="Hour" type="Real" array="False" size=""/>
+            <declare name="Annualy" type="Real" array="False" size=""/>
+            <declare name="Weekly" type="Real" array="False" size=""/>
+            <declare name="Monthly" type="Real" array="False" size=""/>
+            <assign variable="Wage" expression="getWage()"/>
+            <assign variable="Hour" expression="getHour()"/>
+            <assign variable="Weekly" expression="getWeekly(Wage,Hour)"/>
+            <assign variable="Annualy" expression="getAnnualy(Weekly)"/>
+            <assign variable="Monthly" expression="getMonthly(Annualy)"/>
+            <call expression="DisplayWeekly(Weekly)"/>
+            <call expression="DisplayMonthly(Monthly)"/>
+            <call expression="DisplayAnnualy(Annualy)"/>
+        </body>
+    </function>
+    <function name="DisplayAnnualy" type="None" variable="">
+        <parameters>
+            <parameter name="Annualy" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Total Annualy Income : $ &quot; &amp; Annualy" newline="True"/>
+        </body>
+    </function>
+    <function name="DisplayMonthly" type="None" variable="">
+        <parameters>
+            <parameter name="Monthly" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Total Monthly Income : $ &quot; &amp; Monthly" newline="True"/>
+        </body>
+    </function>
+    <function name="DisplayWeekly" type="None" variable="">
+        <parameters>
+            <parameter name="Weekly" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Total Weekly Income : $ &quot; &amp; Weekly" newline="True"/>
+        </body>
+    </function>
+    <function name="GetAnnualy" type="Real" variable="Annualy">
+        <parameters>
+            <parameter name="Weekly" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Annualy" type="Real" array="False" size=""/>
+            <assign variable="Annualy" expression="Weekly * 52"/>
+        </body>
+    </function>
+    <function name="GetHour" type="Real" variable="Hour">
+        <parameters/>
+        <body>
+            <declare name="Hour" type="Real" array="False" size=""/>
+            <output expression="&quot;Please Enter Working Hour of Week : &quot;" newline="True"/>
+            <input variable="Hour"/>
+        </body>
+    </function>
+    <function name="GetMonthly" type="Real" variable="Monthly">
+        <parameters>
+            <parameter name="Annualy" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Monthly" type="Real" array="False" size=""/>
+            <assign variable="Monthly" expression="Annualy / 12"/>
+        </body>
+    </function>
+    <function name="GetWage" type="Real" variable="Wage">
+        <parameters/>
+        <body>
+            <declare name="Wage" type="Real" array="False" size=""/>
+            <output expression="&quot;Please Enter Your Wage per Hour : &quot;" newline="True"/>
+            <input variable="Wage"/>
+        </body>
+    </function>
+    <function name="GetWeekly" type="Real" variable="Weekly">
+        <parameters>
+            <parameter name="Wage" type="Real" array="False"/>
+            <parameter name="Hour" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Weekly" type="Real" array="False" size=""/>
+            <assign variable="Weekly" expression="Wage * Hour"/>
+        </body>
+    </function>
+</flowgorithm>
