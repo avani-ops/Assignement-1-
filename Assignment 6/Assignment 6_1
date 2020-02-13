@@ -30,8 +30,7 @@ def getYard(area):
 
 
 def displayYard(feet, yard):
-    print(f"The area of room is {feet: .0f} square
-        feets and {yard: .2f} square yards")
+    print(f"The area of room is {feet: .0f} square feets and {yard: .2f} square yards")
 
 
 # main function body
