@@ -63,18 +63,21 @@ def displayKilometer(kilometer):
 
 
 #  main function code starts from here
-Mile = getMile()
+def main():
+    Mile = getMile()
 
-Yard = getYard(Mile)
-Feet = getFeet(Mile)
-Inch = getInch(Mile)
-Centimeter = getCentimeter(Mile)
-Meter = getMeter(Centimeter)
-Kilometer = getKilometer(Meter)
+    Yard = getYard(Mile)
+    Feet = getFeet(Mile)
+    Inch = getInch(Mile)
+    Centimeter = getCentimeter(Mile)
+    Meter = getMeter(Centimeter)
+    Kilometer = getKilometer(Meter)
 
-displayYard(Yard)
-displayFeet(Feet)
-displayInch(Inch)
-displayCentimeter(Centimeter)
-displayMeter(Meter)
-displayKilometer(Kilometer)
+    displayYard(Yard)
+    displayFeet(Feet)
+    displayInch(Inch)
+    displayCentimeter(Centimeter)
+    displayMeter(Meter)
+    displayKilometer(Kilometer)
+
+main()
