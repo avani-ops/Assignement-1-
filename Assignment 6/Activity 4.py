@@ -21,7 +21,7 @@ def getArea(length, width):
 
 def displayArea(area):
     print(f"The area of room is {area :.2f} square feets")
-
+    
 
 def getYard(area):
     feet = area // 9
@@ -33,12 +33,15 @@ def displayYard(feet, yard):
     print(f"The area of room is {feet: .0f} square feets and {yard: .2f} square yards")
 
 
+def main():
+    Length = getLength()
+    Width = getWidth()
+
+    Area = getArea(Length, Width)
+
+    displayArea(Area)
+
+    getYard(Area)
+
 # main function body
-Length = getLength()
-Width = getWidth()
-
-Area = getArea(Length, Width)
-
-displayArea(Area)
-
-getYard(Area)
+main()
