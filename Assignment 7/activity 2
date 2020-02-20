@@ -1,24 +1,24 @@
 def display_days(days):
-    print(" Your age in days : " + str(days) + " days")
+  print(" Your age in days : " + str(days) + " days")
 
 
 def display_hours(hours):
-    print(" Your age in hours : " + str(hours) + " Hours")
+  print(" Your age in hours : " + str(hours) + " Hours")
 
 
 def display_months(months):
-    print(" Your age in months : " + str(months) + " Months")
+  print(" Your age in months : " + str(months) + " Months")
 
 
 def display_seconds(seconds):
-    print(" Your age in seconds : " + str(seconds) + " Secs")
+  print(" Your age in seconds : " + str(seconds) + " Secs")
 
 
 def get_age():
-    print("Please enter you age in years : ")
-    age = float(input())
+  print("Please enter you age in years : ")
+  age = float(input())
     
-    return age
+  return age
 
 
 def get_choice():
@@ -33,27 +33,27 @@ def get_choice():
 
 
 def get_days(age):
-    days = age * 365
+  days = age * 365
     
-    return days
+  return days
 
 
 def get_hours(age):
-    hours = age * 8760
+  hours = age * 8760
     
-    return hours
+  return hours
 
 
 def get_months(age):
-    months = age * 12
+  months = age * 12
     
-    return months
+  return months
 
 
 def get_seconds(age):
-    seconds = age * 31556952
+  seconds = age * 31556952
     
-    return seconds
+  return seconds
 
 
 def main():
