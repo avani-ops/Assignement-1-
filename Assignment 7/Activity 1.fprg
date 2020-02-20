@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Avani"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-02-20 03:00:56 AM"/>
+        <attribute name="created" value="QXZhbmk7REVTS1RPUC00QjVERUlUOzIwMjAtMDItMTg7MTI6MjI6NTYgQU07MjgwNQ=="/>
+        <attribute name="edited" value="QXZhbmk7REVTS1RPUC00QjVERUlUOzIwMjAtMDItMjA7MDM6MDA6NTYgQU07MzsyOTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="GrossPay" type="Real" array="False" size=""/>
+            <declare name="Hour" type="Real" array="False" size=""/>
+            <declare name="Wage" type="Real" array="False" size=""/>
+            <declare name="OvertimeHour" type="Integer" array="False" size=""/>
+            <assign variable="Hour" expression="getHour()"/>
+            <assign variable="Wage" expression="getRate()"/>
+            <if expression="Hour&lt;40">
+                <then>
+                    <assign variable="GrossPay" expression="getGrossPay(Hour,Wage)"/>
+                </then>
+                <else>
+                    <assign variable="GrossPay" expression="getOvertimeHour(Hour,Wage)"/>
+                </else>
+            </if>
+            <call expression="displayGrossPay(GrossPay)"/>
+        </body>
+    </function>
+    <function name="displayGrossPay" type="None" variable="">
+        <parameters>
+            <parameter name="pay" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Total Weekly Gross Payment : $ &quot;&amp; pay" newline="True"/>
+        </body>
+    </function>
+    <function name="getGrossPay" type="Real" variable="grosspay">
+        <parameters>
+            <parameter name="hour" type="Real" array="False"/>
+            <parameter name="wage" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <assign variable="grosspay" expression="hour*wage"/>
+        </body>
+    </function>
+    <function name="getHour" type="Real" variable="hour">
+        <parameters/>
+        <body>
+            <declare name="Hour" type="Real" array="False" size=""/>
+            <output expression="&quot;Please Enter your Weekly working Hours :&quot;" newline="True"/>
+            <input variable="hour"/>
+        </body>
+    </function>
+    <function name="getOvertime" type="Real" variable="overtime">
+        <parameters>
+            <parameter name="hour" type="Real" array="False"/>
+            <parameter name="wage" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="overtime" type="Real" array="False" size=""/>
+            <assign variable="overtime" expression="hour*(wage*1.5)"/>
+        </body>
+    </function>
+    <function name="getOvertimeHour" type="Real" variable="overtimehour">
+        <parameters>
+            <parameter name="hour" type="Real" array="False"/>
+            <parameter name="wage" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="overtimehour" type="Real" array="False" size=""/>
+            <assign variable="overtimehour" expression="(wage*40)+((hour-40)*(wage*1.5))"/>
+        </body>
+    </function>
+    <function name="getRate" type="Real" variable="rate">
+        <parameters/>
+        <body>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <output expression="&quot;Please Enter Wages/per hour &quot;" newline="True"/>
+            <input variable="rate"/>
+        </body>
+    </function>
+</flowgorithm>

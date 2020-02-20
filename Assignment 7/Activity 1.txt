@@ -1,0 +1,51 @@
+Function Main
+    Declare Real GrossPay
+    Declare Real Hour
+    Declare Real Wage
+    Declare Integer OvertimeHour
+    
+    Assign Hour = getHour()
+    Assign Wage = getRate()
+    If Hour<40
+        Assign GrossPay = getGrossPay(Hour,Wage)
+    False:
+        Assign GrossPay = getOvertimeHour(Hour,Wage)
+    End
+    Call displayGrossPay(GrossPay)
+End
+
+Function displayGrossPay (Real pay)
+    Output "Total Weekly Gross Payment : $ "& pay
+End
+
+Function getGrossPay (Real hour, Real wage)
+    Declare Real grosspay
+    
+    Assign grosspay = hour*wage
+Return Real grosspay
+
+Function getHour
+    Declare Real Hour
+    
+    Output "Please Enter your Weekly working Hours :"
+    Input hour
+Return Real Hour
+
+Function getOvertime (Real hour, Real wage)
+    Declare Real overtime
+    
+    Assign overtime = hour*(wage*1.5)
+Return Real overtime
+
+Function getOvertimeHour (Real hour, Real wage)
+    Declare Real overtimehour
+    
+    Assign overtimehour = (wage*40)+((hour-40)*(wage*1.5))
+Return Real overtimehour
+
+Function getRate
+    Declare Real rate
+    
+    Output "Please Enter Wages/per hour "
+    Input rate
+Return Real rate
