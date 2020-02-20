@@ -2,82 +2,82 @@
 # meter , centimeter using function and display the output using function
 
 
-def getMile():
+def get_mile():
     print("Please Enter Distance in Miles ")
     mile = float(input())
     return mile
 
 
-def getYard(mile):
+def get_yard(mile):
     yard = mile * 1760
     return yard
 
 
-def getFeet(mile):
+def get_feet(mile):
     feet = mile * 5280
     return feet
 
 
-def getInch(mile):
+def get_inch(mile):
     inch = mile * 63360
     return inch
 
 
-def getCentimeter(mile):
+def get_centimeter(mile):
     centimeter = mile * 160934
     return centimeter
 
 
-def getMeter(centimeter):
+def get_meter(centimeter):
     meter = centimeter / 100
     return meter
 
 
-def getKilometer(meter):
+def get_kilometer(meter):
     kilometer = meter / 1000
     return kilometer
 
 
-def displayYard(yard):
+def display_yard(yard):
     print("Your distance in yards : " + str(yard) + " Yds")
 
 
-def displayFeet(feet):
+def display_feet(feet):
     print("Your distance in feets : " + str(feet) + " Fts")
 
 
-def displayInch(inch):
+def display_inch(inch):
     print("Your distance in inches : " + str(inch) + " Inches")
 
 
-def displayCentimeter(centimeter):
+def display_centimeter(centimeter):
     print("Your distance in centimeters : " + str(centimeter) + " Cms")
 
 
-def displayMeter(meter):
+def display_meter(meter):
     print("Your distance in meters : " + str(meter) + " Meters")
 
 
-def displayKilometer(kilometer):
+def display_kilometer(kilometer):
     print("Your distance in Kilometers : " + str(kilometer) + " Kms")
 
 
 #  main function code starts from here
 def main():
-    Mile = getMile()
+    mile = get_mile()
 
-    Yard = getYard(Mile)
-    Feet = getFeet(Mile)
-    Inch = getInch(Mile)
-    Centimeter = getCentimeter(Mile)
-    Meter = getMeter(Centimeter)
-    Kilometer = getKilometer(Meter)
+    yard = get_yard(mile)
+    feet = get_feet(mile)
+    inch = get_inch(mile)
+    centimeter = get_centimeter(mile)
+    meter = get_meter(centimeter)
+    kilometer = get_kilometer(meter)
 
-    displayYard(Yard)
-    displayFeet(Feet)
-    displayInch(Inch)
-    displayCentimeter(Centimeter)
-    displayMeter(Meter)
-    displayKilometer(Kilometer)
+    display_yard(yard)
+    display_feet(feet)
+    display_inch(inch)
+    display_centimeter(centimeter)
+    display_meter(meter)
+    display_kilometer(kilometer)
 
 main()
