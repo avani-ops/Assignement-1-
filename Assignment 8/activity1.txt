@@ -1,0 +1,40 @@
+Function Main
+    ... This program takes value and expression from user and generates the multiplication expression for given input
+    Declare Integer Value
+    Declare Integer Expression
+    Declare Integer Count
+    Declare Integer Flag
+    
+    Assign Expression = getExpression()
+    Assign Value = getValue()
+    Assign flag = 1
+    While flag <= Expression
+        Assign Count = getCount(Value,flag)
+        Call displayExpression(Value,flag,Count)
+        Assign flag = flag + 1
+    End
+End
+
+Function displayExpression (Integer value, Integer expression, Integer count)
+    Output value & " * " & expression & " = " & count
+End
+
+Function getCount (Integer value, Integer expression)
+    Declare Real count
+    
+    Assign count = value*expression
+Return Real count
+
+Function getExpression
+    Declare Integer expression
+    
+    Output "Please Enter Expression for Multiplication"
+    Input expression
+Return Integer expression
+
+Function getValue
+    Declare Integer value
+    
+    Output "Please Enter the value :"
+    Input value
+Return Integer value

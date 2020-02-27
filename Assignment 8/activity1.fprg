@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Y203EU13"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-02-26 07:22:02 PM"/>
+        <attribute name="created" value="WTIwM0VVMTM7WTIwM0VXMTM7MjAyMC0wMi0yNjswNjoxNDo1MCBQTTsyMjYw"/>
+        <attribute name="edited" value="WTIwM0VVMTM7WTIwM0VXMTM7MjAyMC0wMi0yNjswNzoyMjowMiBQTTsxNTsyNDE4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program takes value and expression from user and generates the multiplication expression for given input"/>
+            <declare name="Value" type="Integer" array="False" size=""/>
+            <declare name="Expression" type="Integer" array="False" size=""/>
+            <declare name="Count" type="Integer" array="False" size=""/>
+            <declare name="Flag" type="Integer" array="False" size=""/>
+            <assign variable="Expression" expression="getExpression()"/>
+            <assign variable="Value" expression="getValue()"/>
+            <assign variable="flag" expression="1"/>
+            <while expression="flag &lt;= Expression">
+                <assign variable="Count" expression="getCount(Value,flag)"/>
+                <call expression="displayExpression(Value,flag,Count)"/>
+                <assign variable="flag" expression="flag + 1"/>
+            </while>
+        </body>
+    </function>
+    <function name="displayExpression" type="None" variable="">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+            <parameter name="expression" type="Integer" array="False"/>
+            <parameter name="count" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="value &amp; &quot; * &quot; &amp; expression &amp; &quot; = &quot; &amp; count" newline="True"/>
+        </body>
+    </function>
+    <function name="getCount" type="Real" variable="count">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+            <parameter name="expression" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Real" array="False" size=""/>
+            <assign variable="count" expression="value*expression"/>
+        </body>
+    </function>
+    <function name="getExpression" type="Integer" variable="expression">
+        <parameters/>
+        <body>
+            <declare name="expression" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please Enter Expression for Multiplication&quot;" newline="True"/>
+            <input variable="expression"/>
+        </body>
+    </function>
+    <function name="getValue" type="Integer" variable="value">
+        <parameters/>
+        <body>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please Enter the value :&quot;" newline="True"/>
+            <input variable="value"/>
+        </body>
+    </function>
+</flowgorithm>
