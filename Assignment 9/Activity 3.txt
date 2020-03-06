@@ -1,0 +1,71 @@
+Function Main
+    ... This program takes age as input in years and display age i days , months , hours and seconds . Program will continue untill user negative or zero in age.
+    Declare Real Age
+    Declare Real Months
+    Declare Real Days
+    Declare Real Hours
+    Declare Real Seconds
+    
+    Loop
+        Assign Age = getAge()
+        If Age > 0
+            Assign Days = getDays(Age)
+            Assign Months = getMonths(Age)
+            Assign Hours = getHours(Age)
+            Assign Seconds = getSeconds(Age)
+            Call displayMonths(Months)
+            Call displayDays(Days)
+            Call displayHours(Hours)
+            Call displaySeconds(Seconds)
+        False:
+            Output " Wrong Input ...Please input correct age next time"
+        End
+    Do Age > 0
+End
+
+Function displayDays (Real Days)
+    Output " Your age in days : " & days & " days"
+End
+
+Function displayHours (Real hours)
+    Output " Your age in hours : " & hours & " Hours"
+End
+
+Function displayMonths (Real Months)
+    Output " Your age in months : " & Months & " Months"
+End
+
+Function displaySeconds (Integer Seconds)
+    Output " Your age in seconds : " & Seconds & " Secs"
+End
+
+Function getAge
+    Declare Real Age
+    
+    Output "Please enter you age in years : "
+    Input Age
+Return Real Age
+
+Function getDays (Real Age)
+    Declare Real Days
+    
+    Assign Days = Age * 365
+Return Real Days
+
+Function getHours (Real Age)
+    Declare Real Hours
+    
+    Assign Hours = Age * 8760
+Return Real Hours
+
+Function getMonths (Real Age)
+    Declare Real Months
+    
+    Assign Months = Age*12
+Return Real Months
+
+Function getSeconds (Real Age)
+    Declare Real Seconds
+    
+    Assign Seconds = Age * 31556952
+Return Real Seconds
