@@ -29,6 +29,7 @@ def get_series(start, end):
         print_y = start
         for print_y in range(start, end + 1):
             print(str(print_x * print_y), end='\t')
+    print()
 
 
 def main():
