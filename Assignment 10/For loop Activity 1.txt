@@ -1,0 +1,38 @@
+Function Main
+    ... This program accepts value and expression from user and using for loop it prints the multiplication table for value till expression
+    Declare Integer value
+    Declare Integer expression
+    Declare Integer answer
+    Declare Integer flag
+    
+    Assign value = getValue()
+    Assign expression = getExpression()
+    For flag = 1 to expression
+        Assign answer = getAnswer(value,flag)
+        Call getOutput(value, flag, answer)
+    End
+End
+
+Function getAnswer (Integer value, Integer expression)
+    Declare Integer answer
+    
+    Assign answer = value * expression
+Return Integer answer
+
+Function getExpression
+    Declare Integer expression
+    
+    Output "Enter how many expression you want to print"
+    Input expression
+Return Integer expression
+
+Function getOutput (Integer value, Integer expression, Integer answer)
+    Output value & " * " & expression & " = " & answer
+End
+
+Function getValue
+    Declare Integer value
+    
+    Output "Enter Value to be printed"
+    Input value
+Return Integer value

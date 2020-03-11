@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Avani"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-03-11 12:34:34 AM"/>
+        <attribute name="created" value="QXZhbmk7REVTS1RPUC00QjVERUlUOzIwMjAtMDMtMTE7MTI6MjA6MjUgQU07Mjc5Mw=="/>
+        <attribute name="edited" value="QXZhbmk7REVTS1RPUC00QjVERUlUOzIwMjAtMDMtMTE7MTI6MzQ6MzQgQU07NzsyOTEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program accepts value and expression from user and using for loop it prints the multiplication table for value till expression"/>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <declare name="expression" type="Integer" array="False" size=""/>
+            <declare name="answer" type="Integer" array="False" size=""/>
+            <declare name="flag" type="Integer" array="False" size=""/>
+            <assign variable="value" expression="getValue()"/>
+            <assign variable="expression" expression="getExpression()"/>
+            <for variable="flag" start="1" end="expression" direction="inc" step="1">
+                <assign variable="answer" expression="getAnswer(value,flag)"/>
+                <call expression="getOutput(value, flag, answer)"/>
+            </for>
+        </body>
+    </function>
+    <function name="getAnswer" type="Integer" variable="answer">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+            <parameter name="expression" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="answer" type="Integer" array="False" size=""/>
+            <assign variable="answer" expression="value * expression"/>
+        </body>
+    </function>
+    <function name="getExpression" type="Integer" variable="expression">
+        <parameters/>
+        <body>
+            <declare name="expression" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter how many expression you want to print&quot;" newline="True"/>
+            <input variable="expression"/>
+        </body>
+    </function>
+    <function name="getOutput" type="None" variable="">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+            <parameter name="expression" type="Integer" array="False"/>
+            <parameter name="answer" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="value &amp; &quot; * &quot; &amp; expression &amp; &quot; = &quot; &amp; answer" newline="True"/>
+        </body>
+    </function>
+    <function name="getValue" type="Integer" variable="value">
+        <parameters/>
+        <body>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Value to be printed&quot;" newline="True"/>
+            <input variable="value"/>
+        </body>
+    </function>
+</flowgorithm>
