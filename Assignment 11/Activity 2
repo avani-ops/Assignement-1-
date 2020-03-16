@@ -1,0 +1,36 @@
+def getMarks():
+    print("Please enter Grades :")
+    marks = int(input())
+    return marks
+
+
+def getSubject():
+    print("Please Enter how many subjects you want to enter ?")
+    subject = int(input())
+    return subject
+
+
+def getSort(Marks):
+    Marks.sort(reverse=True)
+
+
+def getOutPut(marks, subject):
+    print("Grade in highest to minimum range")
+    for i in range(0, subject):
+        print(marks[i])
+
+
+def main():
+    subject = getSubject()
+    flag = 0
+    marks = [subject]
+    while flag < subject:
+        value = getMarks()
+        marks.append(value)
+        flag = flag + 1
+
+    getSort(marks)
+    getOutPut(marks, subject)
+
+
+main()
