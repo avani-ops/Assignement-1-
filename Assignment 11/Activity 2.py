@@ -2,52 +2,50 @@
 # display in descending order
 
 
-def getMarks():
+def get_marks():
     print("Please enter score:")
     marks = int(input())
     return marks
 
 
-def getSubject():
+def get_subject():
     print("Please Enter how many score you want to enter ?")
     subject = int(input())
     return subject
 
 
-def getSort(Marks, score):
-    x = 1
-    while x < score:
+def get_sort(marks, score):
+    x = 0
+    while x < score - 1:
         y = x + 1
-        while y <= score:
-            if(Marks[x] > Marks[y]):
-                temp = Marks[x]
-                Marks[x] = Marks[y]
-                Marks[y] = temp
+        while y < score:
+            if(marks[x] > marks[y]):
+                temp = marks[x]
+                marks[x] = marks[y]
+                marks[y] = temp
             y = y + 1
         x = x + 1
-    return Marks
+    return marks
 
 
-def getOutPut(marks, subject):
+def get_output(marks, subject):
     print("Grade in highest to minimum range")
-    flag = subject
-    while flag >= 1:
+    flag = subject - 1
+    while flag >= 0:
         print(str(marks[flag]))
         flag = flag - 1
 
 
 def main():
-    subject = getSubject()
+    subject = get_subject()
     flag = 0
-    marks = [subject]
-    sortMarks = [subject]
+    marks = [0] * (subject)
     while flag < subject:
-        value = getMarks()
-        marks.append(value)
+        marks[flag] = get_marks()
         flag = flag + 1
 
-    sortMarks = getSort(marks, subject)
-    getOutPut(sortMarks, subject)
+    marks = get_sort(marks, subject)
+    get_output(marks, subject)
 
 
 main()
