@@ -34,3 +34,6 @@ The nested structure allows putting one structure into another one. In this sect
 
 ## Assignment 11
 The array is a collection of elements with the same data type. We have two different dimension array, one dimension known as list and two dimensions are known as the table.  The string is a data type for the collection of integers which is also an array of characters. Each element or value is a member of the array. Array data type also supports built-in function such as maximum(which returns the maximum value element from the array), minimum(which returns minimum value element from the array). Sort() function sort the array element in either ascending or descending order.
+
+## Assignment 12
+I have learned about dynamic array (list) in this section. Dynamic array has no static length but it can be extended till user wants to add run this array. This section also described about different function to access list. Linear search is method to find element in list.This algorithm is also known as sequential search. Max and min is function to retreive the maximum and minimum element from the array. We have alos learned about the sorting algorithm , which allows to sort array in ascending order or descending order. Dynamic array allows to add and remove element from any index of the list.
