@@ -4,8 +4,9 @@
 # of guesses
 
 
-def get_answer(max_no, min_no, mid_no):
+def get_answer(max_no, min_no):
     guess = []
+    mid_no = int((max_no + min_no) / 2)
     while True:
         choice = get_choice(mid_no)
         if choice == 1:
@@ -36,12 +37,9 @@ def get_choice(mid_no):
 
 
 def main():
-    guess = []
     print("Please select one number between 1 - 100")
-    min_no = 0
-    max_no = 100
-    mid_no = 50
-    guess = get_answer(max_no, min_no, mid_no)
+    guess = get_answer(0, 100)
+
     print("Total Guess made : " + str(len(guess)))
     print("Total guesses are mentioned below ")
     print(guess)

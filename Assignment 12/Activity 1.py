@@ -2,64 +2,59 @@
 # dislay highest , lowest and average grade.
 
 
-def get_average(marks, subject):
+def get_average(marks):
     total = 0
-    for flag in range(0, subject, 1):
+    for flag in range(len(marks)):
         total = total + marks[flag]
-    average = float(total) / subject
+    average = float(total) / len(marks)
     return average
 
 
-def get_marks():
+def get_score():
     print("Please enter Grades :")
-    marks = int(input())
+    marks = float(input())
     return marks
 
 
-def get_max(marks, subject):
+def get_marks():
+    marks = []
+    print("Please enter '0' or negative number to stop input grades")
+    while True:
+        score = get_score()
+        if score < 0:
+            break
+        marks.append(score)
+    return marks
+
+
+def get_max(marks):
     max = 0
-    for flag in range(0, subject, 1):
+    for flag in range(len(marks)):
         if max < marks[flag]:
             max = marks[flag]
     return max
 
 
-def get_min(marks, subject):
+def get_min(marks):
     min = marks[0]
-    for flag in range(0, subject, 1):
+    for flag in range(1, len(marks)):
         if min > marks[flag]:
             min = marks[flag]
     return min
 
 
-def get_outPut(max, min, average):
+def display_output(max, min, average):
     print("Maximum Grade : " + str(max))
     print("Minimum Grade : " + str(min))
     print("Average Grade : " + str(average))
 
 
-def add_marks(marks, score):
-    marks.append(score)
-    return marks
-
-
 def main():
-    marks = []
-    flag = 0
-    score = 1
-    print("Please enter '0' or negative number to stop input grades")
-    while True:
-        score = get_marks()
-        if score <= 0:
-            break
-        marks = add_marks(marks, score)
-        flag = flag + 1
-
-    max = get_max(marks, flag)
-    min = get_min(marks, flag)
-    average = get_average(marks, flag)
-    get_outPut(max, min, average)
+    marks = get_marks()
+    max = get_max(marks)
+    min = get_min(marks)
+    average = get_average(marks)
+    display_output(max, min, average)
 
 
 main()
-
