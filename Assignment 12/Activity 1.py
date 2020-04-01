@@ -38,21 +38,21 @@ def get_outPut(max, min, average):
     print("Average Grade : " + str(average))
 
 
-def get_subject():
-    print("Please Enter how many subjects you want to enter ?")
-    subject = int(input())
-    return subject
+def add_marks(marks, score):
+    marks.append(score)
+    return marks
 
 
 def main():
     marks = []
     flag = 0
     score = 1
+    print("Please enter '0' or negative number to stop input grades")
     while True:
         score = get_marks()
         if score <= 0:
             break
-        marks.append(score)
+        marks = add_marks(marks, score)
         flag = flag + 1
 
     max = get_max(marks, flag)
@@ -62,3 +62,4 @@ def main():
 
 
 main()
+
