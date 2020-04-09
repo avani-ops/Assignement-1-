@@ -3,9 +3,7 @@
 
 
 def get_average(marks):
-    total = 0
-    for flag in range(len(marks)):
-        total = total + marks[flag]
+    total = sum(marks)
     average = float(total) / len(marks)
     return average
 
@@ -21,26 +19,10 @@ def get_marks():
     print("Please enter '0' or negative number to stop input grades")
     while True:
         score = get_score()
-        if score < 0:
+        if score <= 0:
             break
         marks.append(score)
     return marks
-
-
-def get_max(marks):
-    max = 0
-    for flag in range(len(marks)):
-        if max < marks[flag]:
-            max = marks[flag]
-    return max
-
-
-def get_min(marks):
-    min = marks[0]
-    for flag in range(1, len(marks)):
-        if min > marks[flag]:
-            min = marks[flag]
-    return min
 
 
 def display_output(max, min, average):
@@ -51,10 +33,8 @@ def display_output(max, min, average):
 
 def main():
     marks = get_marks()
-    max = get_max(marks)
-    min = get_min(marks)
     average = get_average(marks)
-    display_output(max, min, average)
+    display_output(max(marks), min(marks), average)
 
 
 main()
