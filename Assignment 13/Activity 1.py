@@ -3,21 +3,24 @@
 
 
 def get_name():
-    print("Enter Your Name in (FirstName LastName) format")
+    print("Enter Your Name in one line text in (FirstName LastName) format")
     while True:
         name = str(input())
         name = name.strip()
         name_list = name.split()
-        error = check_name(name_list)
+        error = check_name(name_list, name)
         if error == "success":
             break
+
         print("Wrong input please try again")
 
     return name_list
 
 
-def check_name(name_list):
-    if len(name_list) == 2:
+def check_name(name_list, name):
+    if name.isalpha() == "False":
+        error = "fail"
+    elif len(name_list) == 2:
         error = "success"
     else:
         error = "fail"
