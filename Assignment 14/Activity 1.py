@@ -1,8 +1,3 @@
-# This program checks the file is available or not. After finiding the file
-# program reads the data from file seperate the name and score and prints the
-# maximum , minimum and average score
-
-
 def check_file(filename):
     try:
         file = open(filename, "r")
@@ -43,10 +38,10 @@ def get_name(file_data):
 
 def get_average(score):
     total_score = 0
-    for i in range(0, len(score)-1, 1):
+    for i in range(0, len(score), 1):
         total_score = total_score + score[i]
 
-    average = total_score / len(score)
+    average = float(total_score / len(score))
     return average
 
 
