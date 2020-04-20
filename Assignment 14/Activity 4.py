@@ -13,12 +13,10 @@ def check_file(filename):
 
 
 def read_file(filename):
-    file = open(filename, "r")
-    file_data = ""
-    data = []
-    for line in file:
-        file_data = file_data + line
-    file.close()
+    with open(filename, "r") as file:
+        file_data = file.read()
+    # Using with, it is not necessary to close the file.
+    # file.close()
     return file_data
 
 
