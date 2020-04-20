@@ -29,12 +29,16 @@ def print_data(file_data):
         print(address_comma)
 
 
+def get_name(name):
+    name_list = name.split(" ")
+    name = name_list[1] + "," + name_list[0]
+    return name
+
+
 def get_address(address):
     sep_add = address.split("\n")
-    address_comma = ""
-    for i in range(0, len(sep_add) - 1, 1):
-        address_comma = address_comma + sep_add[i] + ","
-
+    address_comma = get_name(sep_add[0]) + ","
+    address_comma = address_comma + sep_add[1] + ","
     state_split = sep_add[len(sep_add) - 1].split(",")
     address_comma = address_comma + state_split[0] + ","
     state_split[1] = state_split[1].strip()
