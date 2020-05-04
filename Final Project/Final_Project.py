@@ -1,11 +1,25 @@
-
+## This program reads data from XML file from online and display in requested way,
+## it also check data validation.
 import urllib.request
-cd_catalog = "https://www.w3schools.com/xml/cd_catalog.xml"
-try:
-    cd_data = urllib.request.urlopen(cd_catalog).read().decode()
-except Exception as exception:
-    print("Try to connect internet or web page not available")
-    exit(1)
+
+def fetch_info():
+    cd_catalog = "https://www.w3schools.com/xml/cd_catalog.xml"
+    try:
+        cd_data = urllib.request.urlopen(cd_catalog).read().decode()
+        main_data = cd_data.split("<TITLE>")
+    except Exception as exception:
+        print("Try to connect internet or web page not available")
+        exit(1)
+    return main_data
+
+
+def main():
+    main_data = fetch_info()
+    print(main_data)
+    
+    
+    
+main()
 
 
 catalog_data = []
@@ -57,7 +71,4 @@ for i in range(0,len(catalog_data)-1,1):
         year_data.append(catalog_data[i])
         print(catalog_data[i])
         
-#for j in range(0, len(title_data)-1 , 1):
-    
-
 
