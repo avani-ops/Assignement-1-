@@ -81,19 +81,63 @@ def get_company_array(record):
     return data
         
 
-def get_data_artist(main_data):
+def get_data_company(main_data):
     company_data = []
     for i in range(1,len(main_data),1):
-        company_data.append(get_artist_array(main_data[i]))
-    print(artist_data)
-    return artist_data
+        company_data.append(get_company_array(main_data[i]))
+    print(company_data)
+    return company_data
+
+
+
+def get_price_array(record):
+    get_record = record.split("\n")
+    data = ""
+    for i in range(0,len(get_record),1):
+        if(get_record[i].find("PRICE") > 0):
+            start = get_record[i].find(">") + 1
+            end  = get_record[i].find("</PRICE>")
+            data = get_record[i][start:end]
+    return data
+        
+
+
+def get_data_price(main_data):
+    price_data = []
+    for i in range(1,len(main_data),1):
+        price_data.append(get_price_array(main_data[i]))
+    print(price_data)
+    return price_data
+
+
+def get_year_array(record):
+    get_record = record.split("\n")
+    data = ""
+    for i in range(0,len(get_record),1):
+        if(get_record[i].find("YEAR") > 0):
+            start = get_record[i].find(">") + 1
+            end  = get_record[i].find("</YEAR>")
+            data = get_record[i][start:end]
+    return data
+        
+
+
+def get_data_year(main_data):
+    year_data = []
+    for i in range(1,len(main_data),1):
+        year_data.append(get_year_array(main_data[i]))
+    print(year_data)
+    return year_data
 
 
 def main():
     main_data = fetch_info()
     title_data = get_data_title(main_data)
     artist_data = get_data_artist(main_data)
-
+    country_data = get_data_country(main_data)
+    company_data = get_data_country(main_data)
+    price_data = get_data_price(main_data)
+    year_data = get_data_year(main_data)
 
 main()
 
