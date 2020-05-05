@@ -15,25 +15,24 @@ def fetch_info():
 
 def get_title_array(record):
     get_record = record.split("\n")
-    data = ""
+    data = "Not Available"
     for i in range(0,len(get_record),1):
         if(get_record[i].find("TITLE") > 0):
             end  = get_record[i].find("</TITLE>")
             data = get_record[i][:end]
     return data
-        
 
 
 def get_data_title(main_data):
     title_data = []
     for i in range(1,len(main_data),1):
         title_data.append(get_title_array(main_data[i]))
-    
     return title_data
+
 
 def get_artist_array(record):
     get_record = record.split("\n")
-    data = ""
+    data = "Not Available"
     for i in range(0,len(get_record),1):
         if(get_record[i].find("ARTIST") > 0):
             start = get_record[i].find(">") + 1
@@ -47,13 +46,12 @@ def get_data_artist(main_data):
     artist_data = []
     for i in range(1,len(main_data),1):
         artist_data.append(get_artist_array(main_data[i]))
-    print(artist_data)
     return artist_data
 
 
 def get_country_array(record):
     get_record = record.split("\n")
-    data = ""
+    data = "Not Available"
     for i in range(0,len(get_record),1):
         if(get_record[i].find("COUNTRY") > 0):
             start = get_record[i].find(">") + 1
@@ -66,13 +64,12 @@ def get_data_country(main_data):
     country_data = []
     for i in range(1,len(main_data),1):
         country_data.append(get_country_array(main_data[i]))
-    print(country_data)
     return country_data
 
 
 def get_company_array(record):
     get_record = record.split("\n")
-    data = ""
+    data = "Not Available"
     for i in range(0,len(get_record),1):
         if(get_record[i].find("COMPANY") > 0):
             start = get_record[i].find(">") + 1
@@ -85,14 +82,13 @@ def get_data_company(main_data):
     company_data = []
     for i in range(1,len(main_data),1):
         company_data.append(get_company_array(main_data[i]))
-    print(company_data)
     return company_data
 
 
 
 def get_price_array(record):
     get_record = record.split("\n")
-    data = ""
+    data = 0.00
     for i in range(0,len(get_record),1):
         if(get_record[i].find("PRICE") > 0):
             start = get_record[i].find(">") + 1
@@ -106,13 +102,12 @@ def get_data_price(main_data):
     price_data = []
     for i in range(1,len(main_data),1):
         price_data.append(get_price_array(main_data[i]))
-    print(price_data)
     return price_data
 
 
 def get_year_array(record):
     get_record = record.split("\n")
-    data = ""
+    data = "Not Available"
     for i in range(0,len(get_record),1):
         if(get_record[i].find("YEAR") > 0):
             start = get_record[i].find(">") + 1
@@ -126,18 +121,21 @@ def get_data_year(main_data):
     year_data = []
     for i in range(1,len(main_data),1):
         year_data.append(get_year_array(main_data[i]))
-    print(year_data)
     return year_data
 
+def print_output(title_data,artist_data,country_data,company_data,price_data,year_data):
+    for i in range (0, len(title_data),1):
+        print(f"{title_data[i]} - {artist_data[i]} - {country_data[i]} - {company_data[i]} - $ {price_data[i]} - {year_data[i]}")
 
 def main():
     main_data = fetch_info()
     title_data = get_data_title(main_data)
     artist_data = get_data_artist(main_data)
     country_data = get_data_country(main_data)
-    company_data = get_data_country(main_data)
+    company_data = get_data_company(main_data)
     price_data = get_data_price(main_data)
     year_data = get_data_year(main_data)
+    print_output(title_data,artist_data,country_data,company_data,price_data,year_data)
 
 main()
 
