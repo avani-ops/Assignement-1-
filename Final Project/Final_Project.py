@@ -12,6 +12,7 @@ def fetch_info():
         exit(1)
     return main_data
 
+
 def get_title_array(record):
     get_record = record.split("\n")
     data = ""
@@ -23,18 +24,75 @@ def get_title_array(record):
         
 
 
-def get_data_array(main_data):
+def get_data_title(main_data):
     title_data = []
-    for i in range(1,len(main_data)-1,1):
+    for i in range(1,len(main_data),1):
         title_data.append(get_title_array(main_data[i]))
     
-    print(title_data)
+    return title_data
+
+def get_artist_array(record):
+    get_record = record.split("\n")
+    data = ""
+    for i in range(0,len(get_record),1):
+        if(get_record[i].find("ARTIST") > 0):
+            start = get_record[i].find(">") + 1
+            end  = get_record[i].find("</ARTIST>")
+            data = get_record[i][start:end]
+    return data
+        
+
+
+def get_data_artist(main_data):
+    artist_data = []
+    for i in range(1,len(main_data),1):
+        artist_data.append(get_artist_array(main_data[i]))
+    print(artist_data)
+    return artist_data
+
+
+def get_country_array(record):
+    get_record = record.split("\n")
+    data = ""
+    for i in range(0,len(get_record),1):
+        if(get_record[i].find("COUNTRY") > 0):
+            start = get_record[i].find(">") + 1
+            end  = get_record[i].find("</COUNTRY>")
+            data = get_record[i][start:end]
+    return data
+
+
+def get_data_country(main_data):
+    country_data = []
+    for i in range(1,len(main_data),1):
+        country_data.append(get_country_array(main_data[i]))
+    print(country_data)
+    return country_data
+
+
+def get_company_array(record):
+    get_record = record.split("\n")
+    data = ""
+    for i in range(0,len(get_record),1):
+        if(get_record[i].find("COMPANY") > 0):
+            start = get_record[i].find(">") + 1
+            end  = get_record[i].find("</COMPANY>")
+            data = get_record[i][start:end]
+    return data
+        
+
+def get_data_artist(main_data):
+    company_data = []
+    for i in range(1,len(main_data),1):
+        company_data.append(get_artist_array(main_data[i]))
+    print(artist_data)
+    return artist_data
 
 
 def main():
     main_data = fetch_info()
-    print(main_data)
-
+    title_data = get_data_title(main_data)
+    artist_data = get_data_artist(main_data)
 
 
 main()
