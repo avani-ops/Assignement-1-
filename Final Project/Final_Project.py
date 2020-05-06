@@ -70,6 +70,9 @@ def main():
     country_data = get_data(main_data, "</COUNTRY>")
     company_data = get_data(main_data, "</COMPANY>")
     price_data = get_data(main_data, "</PRICE>")
+
+    artist_data.pop(0)
+
     price_data = check_price(price_data)
     year_data = get_data(main_data, "</YEAR>")
     print_output(title_data, artist_data, country_data, company_data, price_data, year_data)
