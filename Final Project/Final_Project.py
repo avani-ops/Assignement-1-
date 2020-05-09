@@ -46,7 +46,8 @@ def check_price(price):
 
 
 def print_output(title_data, artist_data, country_data, company_data, price_data, year_data):
-    for i in range(0, len(title_data), 1):
+    display_range = min(len(title_data),len(artist_data),len(country_data),len(company_data),len(price_data),len(year_data))
+    for i in range(0, display_range, 1):
         print(f"{title_data[i]} - {artist_data[i]} - {country_data[i]} - {company_data[i]} - $ {price_data[i]} - {year_data[i]}")
 
 
@@ -70,9 +71,6 @@ def main():
     country_data = get_data(main_data, "</COUNTRY>")
     company_data = get_data(main_data, "</COMPANY>")
     price_data = get_data(main_data, "</PRICE>")
-
-    artist_data.pop(0)
-
     price_data = check_price(price_data)
     year_data = get_data(main_data, "</YEAR>")
     print_output(title_data, artist_data, country_data, company_data, price_data, year_data)
@@ -80,3 +78,4 @@ def main():
     print_output_average(len(title_data), average_data)
 
 main()
+
